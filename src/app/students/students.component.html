@@ -34,8 +34,8 @@
                         <td>{{s.name}}</td>
                         <td>{{s.curso}}</td>
                         <td class="text-end">
-                            <button type="button" class="btn btn-primary me-2">Editar</button>
-                            <button type="button" class="btn btn-danger">Remover</button>
+                            <button type="button" class="btn btn-primary me-2" (click)="update(s)">Editar</button>
+                            <button type="button" class="btn btn-danger" (click)="delete(s)">Remover</button>
                         </td>
                     </tr>
                 </tbody>

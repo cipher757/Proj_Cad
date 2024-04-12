@@ -2,13 +2,18 @@
   "students": [
     {
       "id": "",
-      "name": "A",
-      "curso": "A"
+      "name": "João",
+      "curso": "DS"
     },
     {
       "id": "",
-      "name": "213213",
-      "curso": "213213"
+      "name": "asd",
+      "curso": "d"
+    },
+    {
+      "id": "",
+      "name": "asd",
+      "curso": "d"
     }
   ]
 }
