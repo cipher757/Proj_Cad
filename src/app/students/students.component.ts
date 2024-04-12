@@ -4,22 +4,22 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { StudentService } from '../student.service';
 
 @Component({
-  selector: 'app-alunos',
-  templateUrl: './alunos.component.html',
-  styleUrl: './alunos.component.css'
+  selector: 'app-students',
+  templateUrl: './students.component.html',
+  styleUrl: './students.component.css'
 })
-export class AlunosComponent implements OnInit{
+export class StudentsComponent implements OnInit {
   //aluno (S) = student (S) // curso (S) = course (S)
   students: student[] = [];
   studentFormGroup: FormGroup;
 
   constructor(private formBuilder: FormBuilder,
     private service: StudentService
-    ){
+  ) {
     this.studentFormGroup = formBuilder.group({
-      id:[''],
-      name:[''],
-      curso:['']
+      id: [''],
+      name: [''],
+      curso: ['']
     });
   }
   ngOnInit(): void {
@@ -28,7 +28,13 @@ export class AlunosComponent implements OnInit{
     });
   }
 
-  save(){
-    this.students.push(this.studentFormGroup.value);
+  save() {
+    this.service.save(this.studentFormGroup.value).subscribe(
+      {
+        next: data => this.students.push(data)
+      }
+
+    )
   }
 }
+

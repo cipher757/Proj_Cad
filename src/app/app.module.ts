@@ -5,13 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { AlunosComponent } from './alunos/alunos.component';
 import { HttpClientModule } from '@angular/common/http';
+import { StudentsComponent } from './students/students.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AlunosComponent
+    StudentsComponent
   ],
   imports: [
     BrowserModule,
